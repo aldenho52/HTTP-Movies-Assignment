@@ -29,7 +29,9 @@ const UpdateForm = props => {
     const changeHandler = e => {
         e.persist()
         let value = e.target.value;
-
+        if (e.target.name === 'stars') {
+            value = value.split(',')
+        }
         setMovie({
             ...movie,
             [e.target.name]: value
@@ -69,6 +71,13 @@ const UpdateForm = props => {
                         onChange={changeHandler}
                         placeholder="metascore"
                         value={movie.metascore}
+                />
+                <input
+                        type="text"
+                        name="stars"
+                        onChange={changeHandler}
+                        placeholder="stars"
+                        value={movie.stars}
                 />
                 <button>
                 Update
