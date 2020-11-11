@@ -90,3 +90,13 @@ body {
   justify-content: space-between;
   width: 20%;
 }
+
+/* Update Form */
+
+.update-form {
+  text-align: center;
+}
+
+.label-container {
+  width: 250px;
+}

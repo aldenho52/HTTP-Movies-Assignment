@@ -48,9 +48,10 @@ const UpdateForm = props => {
     }
 
     return (
-        <div>
+        <div className='update-form'>
             <h2>Update Movie</h2>
             <form onSubmit={handleSubmit}>
+            <label className='label-container'>Title:
                 <input
                     type="text"
                     name="title"
@@ -58,6 +59,8 @@ const UpdateForm = props => {
                     placeholder="title"
                     value={movie.title}
                 />
+            </label><br></br>
+            <label className='label-container'>Director:
                 <input
                     type="text"
                     name="director"
@@ -65,20 +68,26 @@ const UpdateForm = props => {
                     placeholder="director"
                     value={movie.director}
                 />
+            </label><br></br>
+            <label className='label-container'>Metascore:
                 <input
-                        type="text"
-                        name="metascore"
-                        onChange={changeHandler}
-                        placeholder="metascore"
-                        value={movie.metascore}
+                    type="text"
+                    name="metascore"
+                    onChange={changeHandler}
+                    placeholder="metascore"
+                    value={movie.metascore}
                 />
-                <input
-                        type="text"
-                        name="stars"
-                        onChange={changeHandler}
-                        placeholder="stars"
-                        value={movie.stars}
-                />
+            </label><br></br>
+            <label className='label-container'>Stars:
+            <input
+                type="text"
+                name="stars"
+                onChange={changeHandler}
+                placeholder="stars"
+                value={movie.stars}
+            />
+            </label><br></br>
+            <p>Enter star names seperated by a comma</p> 
                 <button>
                 Update
                 </button>
