@@ -19,7 +19,7 @@ const UpdateForm = props => {
     useEffect (() => {
         axios.get(`http://localhost:5000/api/movies/${id}`)
             .then(res => {
-                console.log(res)
+                setMovie(res.data)
             })
             .catch(err => {
                 console.log(err)
@@ -28,9 +28,11 @@ const UpdateForm = props => {
 
     const changeHandler = e => {
         e.persist()
+        let value = e.target.value;
+
         setMovie({
             ...movie,
-            [e.target.name]: e.target.value
+            [e.target.name]: value
         })
     }
 
