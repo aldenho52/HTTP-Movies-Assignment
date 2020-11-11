@@ -97,6 +97,19 @@ body {
   text-align: center;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .label-container {
-  width: 250px;
+  width: 50%;
+}
+
+.input-container {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 0;
 }

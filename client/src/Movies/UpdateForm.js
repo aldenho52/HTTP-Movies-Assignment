@@ -50,26 +50,29 @@ const UpdateForm = props => {
     return (
         <div className='update-form'>
             <h2>Update Movie</h2>
-            <form onSubmit={handleSubmit}>
-            <label className='label-container'>Title:
-                <input
-                    type="text"
-                    name="title"
-                    onChange={changeHandler}
-                    placeholder="title"
-                    value={movie.title}
-                />
-            </label><br></br>
-            <label className='label-container'>Director:
-                <input
-                    type="text"
-                    name="director"
-                    onChange={changeHandler}
-                    placeholder="director"
-                    value={movie.director}
-                />
-            </label><br></br>
-            <label className='label-container'>Metascore:
+            <form className='form-container'onSubmit={handleSubmit}>
+            <div className='input-container'>
+            <span>Title:</span>
+            <input
+                type="text"
+                name="title"
+                onChange={changeHandler}
+                placeholder="title"
+                value={movie.title}
+            />
+            </div>
+            <div className='input-container'>
+            <span>Director:</span>
+            <input
+                type="text"
+                name="director"
+                onChange={changeHandler}
+                placeholder="director"
+                value={movie.director}
+            />
+            </div>
+            <div className='input-container'>
+            <span>Metascore:</span>
                 <input
                     type="text"
                     name="metascore"
@@ -77,8 +80,9 @@ const UpdateForm = props => {
                     placeholder="metascore"
                     value={movie.metascore}
                 />
-            </label><br></br>
-            <label className='label-container'>Stars:
+            </div>
+            <div className='input-container'>
+            <span>Stars:*</span>
             <input
                 type="text"
                 name="stars"
@@ -86,8 +90,8 @@ const UpdateForm = props => {
                 placeholder="stars"
                 value={movie.stars}
             />
-            </label><br></br>
-            <p>Enter star names seperated by a comma</p> 
+            </div>
+            <p>*Enter star names seperated by a comma</p> 
                 <button>
                 Update
                 </button>

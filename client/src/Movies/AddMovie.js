@@ -44,9 +44,11 @@ const AddMovie = props => {
     }
 
     return (
-        <div>
+        <div className='update-form'>
             <h2>Add New Movie</h2>
-            <form onSubmit={handleSubmit}>
+            <form className='form-container' onSubmit={handleSubmit}>
+            <div className='input-container'>
+                <span>Title:</span>
                 <input
                     type="text"
                     name="title"
@@ -54,6 +56,9 @@ const AddMovie = props => {
                     placeholder="title"
                     value={movie.title}
                 />
+            </div>
+            <div className='input-container'>
+                <span>Director:</span>
                 <input
                     type="text"
                     name="director"
@@ -61,6 +66,9 @@ const AddMovie = props => {
                     placeholder="director"
                     value={movie.director}
                 />
+            </div>
+            <div className='input-container'>
+                <span>Metascore:</span>
                 <input
                         type="text"
                         name="metascore"
@@ -68,6 +76,9 @@ const AddMovie = props => {
                         placeholder="metascore"
                         value={movie.metascore}
                 />
+            </div>
+            <div className='input-container'>
+                <span>Stars:*</span>
                 <input
                         type="text"
                         name="stars"
@@ -75,7 +86,8 @@ const AddMovie = props => {
                         placeholder="stars"
                         value={movie.stars}
                 />
-                <p>Enter star names seperated by a comma</p>
+            </div>
+                <p>*Enter star names seperated by a comma</p>
                 <button>
                 Add
                 </button>
