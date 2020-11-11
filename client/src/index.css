@@ -69,9 +69,24 @@ body {
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
+  border: 2px solid lightskyblue;
+  border-radius: 5px;
 }
 
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.add-movie-button {
+  background-color: lightskyblue;
+  padding: 5px 10px;
+  border: 2px solid lightskyblue;
+  border-radius: 5px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
 }
