@@ -5,6 +5,11 @@ body {
   background-color: #f2f2f2;
 }
 
+/* .movie-list {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
 .movie-card {
   background-color: #fff;
   border: 0;
@@ -13,7 +18,19 @@ body {
   padding: 1rem;
   cursor: pointer;
   position: relative;
-  margin: 1rem auto;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+.link-card {
+  color: black;
+  text-decoration: none;
+}
+
+.movie-card:hover {
+  background: lightskyblue;
+  transition-duration: 500ms;
+  
 }
 
 .movie-director {
@@ -108,7 +125,7 @@ body {
 }
 
 .input-container {
-  width: 25%;
+  width: 1git [5%;
   display: flex;
   justify-content: space-between;
   margin: 1% 0;

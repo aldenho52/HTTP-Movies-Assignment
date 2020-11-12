@@ -9,7 +9,7 @@ function MovieList(props) {
     <div className="movie-list">
       {
         movies.map(movie => (
-          <Link key={movie.id} to={`/movies/${movie.id}`}>
+          <Link className='link-card' key={movie.id} to={`/movies/${movie.id}`}>
             <MovieCard movie={movie} />
           </Link>
         ))
